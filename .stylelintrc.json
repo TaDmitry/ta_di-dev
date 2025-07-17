@@ -1,0 +1,18 @@
+{
+	"extends": ["stylelint-config-standard"],
+	"plugins": ["stylelint-scss", "stylelint-order"],
+	"rules": {
+		"order/properties-order": ["display", "position", "top", "right", "bottom", "left"],
+		"no-duplicate-selectors": true,
+		"color-hex-length": "short"
+	},
+	"overrides": [
+		{
+			"files": ["**/*.scss", "**/*.sass"],
+			"customSyntax": "postcss-scss",
+			"rules": {
+				"scss/no-unused-variables": true
+			}
+		}
+	]
+}
