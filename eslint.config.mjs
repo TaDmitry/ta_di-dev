@@ -3,7 +3,7 @@ import { fileURLToPath } from 'url';
 import tsParser from '@typescript-eslint/parser';
 import { FlatCompat } from '@eslint/eslintrc';
 
-// Плагины ESLint
+//* Плагины ESLint
 import pluginReactHooks from 'eslint-plugin-react-hooks';
 import pluginSimpleImportSort from 'eslint-plugin-simple-import-sort';
 import pluginA11y from 'eslint-plugin-jsx-a11y';
@@ -17,14 +17,14 @@ const __dirname = dirname(__filename);
 const compat = new FlatCompat({ baseDirectory: __dirname });
 
 const eslintConfig = [
-	// Расширения базовых конфигураций
+	//* Расширения базовых конфигураций
 	...compat.extends(
 		'next/core-web-vitals',
 		'next/typescript',
 		'plugin:@typescript-eslint/recommended',
 		'eslint-config-prettier'
 	),
-	// Основная конфигурация для проекта
+	//* Основная конфигурация для проекта
 	{
 		ignores: ['node_modules', '.next', 'dist', 'out', 'public', '.cache', 'eslint.config.mjs'],
 		files: ['**/*.{js,ts,jsx,tsx}'],
@@ -48,7 +48,7 @@ const eslintConfig = [
 			},
 		},
 		rules: {
-			// Сортировка импортов: external, alias, relative, стили
+			//* Сортировка импортов: external, alias, relative, стили
 			'simple-import-sort/imports': [
 				'error',
 				{
@@ -61,20 +61,20 @@ const eslintConfig = [
 				},
 			],
 			'simple-import-sort/exports': 'error',
-			// Отключаем import/order чтобы избежать конфликтов
+			//* Отключаем import/order чтобы избежать конфликтов
 			'import/order': 'off',
 
-			// Пустая строка после всех импортов — только после последнего
+			//* Пустая строка после всех импортов — только после последнего
 			'import/newline-after-import': ['error', { count: 1 }],
 
-			// Отступы между другими блоками
+			//* Отступы между другими блоками
 			'padding-line-between-statements': [
 				'error',
 				{ blankLine: 'always', prev: '*', next: 'return' },
 				{ blankLine: 'always', prev: 'block-like', next: 'export' },
 			],
 
-			// Прочие правила
+			//* Прочие правила
 			'prettier/prettier': 'error',
 			'react-hooks/rules-of-hooks': 'error',
 			'react-hooks/exhaustive-deps': 'warn',
@@ -116,7 +116,7 @@ const eslintConfig = [
 		settings: { react: { version: 'detect' } },
 	},
 
-	// Отключение правила sonarjs в папке локалей
+	//* Отключение правила sonarjs в папке локалей
 	{ files: ['**/locales/**'], rules: { 'sonarjs/no-duplicate-string': 'off' } },
 ];
 

@@ -15,17 +15,6 @@
 		"stylelint": "stylelint \"**/*.{css,scss,less}\"",
 		"stylelint:fix": "stylelint \"**/*.{css,scss,less}\" --fix"
 	},
-	"lint-staged": {
-		"*.{js,jsx,ts,tsx,css,scss,sass,module.scss,module.sass,md,json}": [
-			"prettier --write"
-		],
-		"*.{js,jsx,ts,tsx}": [
-			"eslint --fix --max-warnings=0"
-		],
-		"*.{css,scss,sass,less,module.scss,module.sass}": [
-			"stylelint --fix"
-		]
-	},
 	"dependencies": {
 		"next": "15.3.5",
 		"react": "^19.1.0",

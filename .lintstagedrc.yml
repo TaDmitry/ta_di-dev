@@ -1,0 +1,11 @@
+#* Prettier
+'*.{js,jsx,ts,tsx,css,scss,sass,module.scss,module.sass,md,json}':
+  - 'prettier --write'
+
+#* ESLint для JS/TS
+'*.{js,jsx,ts,tsx}':
+  - 'eslint --fix --max-warnings=0'
+
+#* Stylelint
+'*.{css,scss,sass,less,module.scss,module.sass}':
+  - 'stylelint --fix'

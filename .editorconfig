@@ -1,0 +1,31 @@
+#* Устанавливаем корневой уровень дальше искать конфиги не нужно
+root = true
+
+#* Общие правила для всех файлов
+[*]
+indent_style = tab
+indent_size = 2
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+end_of_line = lf
+
+#* Для markdown и MDX-файлов
+[*.{md,mdx}]
+trim_trailing_whitespace = false  #* чтобы не удалять значимые пробелы в списках
+indent_size = 2                   #* совпадает с табами, хотя в MD обычно пробелы
+
+#* Для JSON, YAML-файлов
+[*.{json,yml,yaml}]
+indent_style = tab  #* вы используете табы и здесь
+indent_size = 2
+
+#* Для HTML-файлов (если нужно особо строгую обработку)
+[*.{html,htm}]
+indent_style = tab
+indent_size = 2
+
+#* Опционально: для стилевых файлов (CSS/SCSS/SASS/LESS)
+[*.{css,scss,sass,less}]
+indent_style = tab
+indent_size = 2
