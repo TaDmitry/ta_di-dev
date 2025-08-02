@@ -88,7 +88,7 @@ export default function Home() {
 						src='/globe.svg'
 						width={16}
 					/>
-					Go to nextjs.org →
+					Go to next.js.org →
 				</a>
 			</footer>
 		</div>
