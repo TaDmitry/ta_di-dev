@@ -29,8 +29,7 @@
 		"src/**/*.tsx",
 		".next/types/**/*.ts",
 		"*.config.ts",
-		"src/**/*",
-		"commitlint.config.cjs"
+		"src/**/*"
 	],
 	"exclude": ["node_modules"]
 }

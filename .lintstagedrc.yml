@@ -7,5 +7,5 @@
   - 'eslint --fix --max-warnings=0'
 
 #* Stylelint
-'*.{css,scss,sass,less,module.scss,module.sass}':
+'*.{css,scss,sass,less}':
   - 'stylelint --fix'
